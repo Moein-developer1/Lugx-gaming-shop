@@ -371,7 +371,7 @@ nav{
 /* Trending Games */
 
 .trendinggame__sect{
-    margin-top: 8rem;
+    margin-top: 6rem;
 }
 
 .section__littletitle{
@@ -494,7 +494,7 @@ nav{
 /* top game section */
 
 .topgame__sect{
-    margin-top: 8rem;
+    margin-top: 6rem;
     background-color: #f7f7f7;
     padding: 6rem 0 8rem;
     border-radius: 8rem;
@@ -598,7 +598,7 @@ nav{
 /* categories */
 
 .categories__sect{
-    margin-top: 8rem;
+    margin-top: 6rem;
 }
 
 .categories__sect .section__littletitle{
@@ -954,6 +954,10 @@ nav{
 
     .trendgame__items{
         width: calc(50% - 12px);
+    }
+
+    .CTA__sect {
+        margin-top: 6rem;
     }
 
     .CTA__sect::after{
