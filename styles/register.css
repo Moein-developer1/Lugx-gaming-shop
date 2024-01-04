@@ -1,0 +1,320 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: sans-serif;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom , #6a6a6a30 , #000) , url(../images/bg\ login\ form\ 2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container{
+    max-width: 86rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* css loader */
+
+.preloader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #000203 ;
+    gap: 5px;
+}
+
+.preloader.loaded{
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
+
+.three__dot{
+    animation: taransformThree 2s ease-in-out infinite alternate;
+}
+
+.three__dot .dot {
+    margin-right: 10px;
+}
+
+.single__dot{
+    animation: transformSingle 2s ease-in-out infinite alternate ;
+}
+
+@keyframes transformSingle {
+    0%{
+        transform: translateX(0);
+    }
+
+    100%{
+        transform: translateX(-65px);
+    }
+}
+
+ @keyframes taransformThree {
+    0%{
+        transform: translateX(0);
+    }
+
+    100%{
+        transform: translateX(50px);
+    }
+}
+
+.dot{
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background-color: #0071f8;  
+    border-radius: 50%;
+}
+
+.webpage.hidden{
+    display: none;
+}
+
+.bg__overly {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+}
+
+.form__box {
+    background-color: #ffffffa8;
+    backdrop-filter: blur(5px);
+    display: flex;
+    max-width: 750px;
+    width: 100%;
+    padding: .2rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.form__box h2 {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.form__box .form__detials {
+    width: 50%;
+    padding: 1.5rem;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form__box .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #272727;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.form__box.sign__in .form__detials {
+    background: linear-gradient(to bottom , #6a6a6a30 , #000) , url(../images/bg\ them.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.form__box.sign__up .form__detials {
+    background: linear-gradient(to bottom , #6a6a6a30 , #000) , url(../images/bg\ them\ 2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.form__box.sign__up ,
+.show__sign-up .form__box.sign__in{
+    display: none;
+}
+
+.show__sign-up .form__box.sign__up {
+    display: flex;
+}
+
+.form__box .form__detials p{
+    line-height: 1.5;
+
+}
+
+.form__box .form__content {
+    width: 50%;
+    padding: 1.5rem;
+    animation: move .5s ease-out;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(100%);
+    }
+}
+
+.form__content form .input__field {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+form .input__field input {
+    width: 100%;
+    height: 100%;
+    border: solid 2px #939393c9;
+    outline: none;
+    padding: 0 1rem;
+    font-size: 16px;
+    border-radius: .4rem ;
+}
+
+form .input__field label {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #999;
+    transition: all .2s;
+}
+
+form .input__field i {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+form .input__field input:is(:focus , :valid) {
+    border-color: #0071f8;
+    padding-top: 1rem;
+}
+
+form .input__field input:is(:focus , :valid) ~ label {
+    font-size: .75rem;
+    transform: translateY(-120%);
+    color: #0071f8;
+}
+
+.form__content form .forgot__pass {
+    display: inline-block;
+    text-decoration: none;
+    color: #0071f8;    
+    margin-bottom: .6rem;
+}
+
+.form__content form .policy {
+    margin-bottom: .8rem;
+    user-select: none;
+}
+
+.form__content form .policy a {
+    text-decoration: none;
+    color: #0071f8;
+}
+
+.form__content form .policy a:hover {
+    text-decoration: underline;
+}
+
+.form__content form .forgot__pass:hover {
+    text-decoration: underline;
+}
+
+.form__content form button {
+    all: unset;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0071f8;
+    color: #fff;
+    padding: .8rem 0;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    border-radius: .4rem;
+    transition: all .5s;
+}
+
+.form__content form button:hover{
+    background-color: #4292f1;
+}
+
+.form__content .bottom__link a {
+    text-decoration: none;
+    color: #0071f8;
+}
+
+.form__content .bottom__link a:hover {
+    text-decoration: underline;
+}
+
+/* responsive */
+
+@media screen and (max-width:1400px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media screen and (max-width:578px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .form__box .form__detials{
+        display: none;
+    }
+
+    .form__box .form__content {
+        width: 100%;
+        padding: 1rem;
+    }
+}

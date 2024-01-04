@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <title>Register - Lugx gaming website</title>
+    <link rel="stylesheet" href="styles/register.css">
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <div class="preloader">
+        <div class="three__dot">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <div class="single__dot">
+            <span class="dot"></span>
+        </div>
+    </div>
+    
+    <div class="webpage hidden">
+        <div class="bg__overly">
+            <div class="container">
+                <div class="form__box sign__in">
+                    <span class="close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </span>
+                   <div class="form__detials">
+                        <h2>Welcome Back</h2>
+                        <p>please log in using personal information to stay connected with us.</p>
+                   </div>
+                   <div class="form__content">
+                        <h2>Sign in</h2>
+                        <form action="">
+                            <div class="input__field">
+                                <input type="text" name="" id="" required>
+                                <label for="">Email</label>
+                            </div>
+        
+                            <div class="input__field">
+                                <input type="password" name="" class="password__input" id="" required>
+                                <label for="">Password</label>
+                                <i class="fa-solid fa-eye" id="sign__in-show"></i>
+                            </div>
+                            <a class="forgot__pass" href="#">Forgot Password?</a>
+                            <button type="submit">Sign in</button>
+                        </form>
+                        <div class="bottom__link">
+                            Don't have an account?
+                            <a href="#" id="sign__up-link">Sign up</a>
+                        </div>
+                   </div>
+                </div>
+                <div class="form__box sign__up">
+                    <span class="close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </span>
+                    <div class="form__detials">
+                         <h2>Create Account</h2>
+                         <p>To become a part of our community please sign up using your personal information.</p>
+                    </div>
+                    <div class="form__content">
+                         <h2>Sign up</h2>
+                         <form action="">
+                             <div class="input__field">
+                                 <input type="text" name="" id="" required>
+                                 <label for="">Name</label>
+                             </div>
+        
+                             <div class="input__field">
+                                 <input type="text" name="" id="" required>
+                                 <label for="">Email</label>
+                             </div>
+         
+                             <div class="input__field">
+                                 <input type="password" name="" id="" class="password__input" required>
+                                 <label for="">Password</label>
+                                 <i class="fa-solid fa-eye"></i>
+                             </div>
+                             <div class="policy">
+                                <input type="checkbox" name="" id="policy" required>
+                                <label for="policy">
+                                    I agree the
+                                    <a href="#">Terms & Condition</a>
+                                </label>
+                             </div>
+                             <button type="submit">Sign up</button>
+                         </form>
+                         <div class="bottom__link">
+                             Don't have an account?
+                             <a href="#" id="sign__in-link">Sign up</a>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/register.js"></script>
+</body>
+</html>
