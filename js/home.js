@@ -11,9 +11,7 @@ function loadPage () {
 }
 
 window.addEventListener('load', () => {
-   setTimeout(() => {
-       loadPage()
-}, 1000);
+    loadPage()
     sliderAction()
 })
 
@@ -69,14 +67,6 @@ const sliderAction = () => {
     const arrowBtns = $.querySelectorAll('.category__wraper i')
     const firstCardWidth = $.querySelector('.category__card').offsetWidth
     const carouselChildren = [...carousel.children]
-
-    console.log($.querySelector('.category__card'))
-
-    console.log(wraper)
-    console.log(carousel)
-    console.log(arrowBtns)
-    console.log(firstCardWidth)
-    console.log(carouselChildren)
 
     let isDragging = false , startX , startScrollLeft , timeoutId
 
