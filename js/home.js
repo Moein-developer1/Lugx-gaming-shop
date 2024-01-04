@@ -11,9 +11,7 @@ function loadPage () {
 }
 
 window.addEventListener('load', () => {
-   setTimeout(() => {
-       loadPage()
-}, 1000);
+    loadPage()
     sliderAction()
 })
 
