@@ -19,7 +19,8 @@ window.addEventListener('load', () => {
 // show and hide password
 
 const showBtn = $.querySelectorAll('form .input__field i')
-const inputElem = $.querySelectorAll('form .input__field .password__input')
+const inputElems = $.querySelectorAll('form .input__field input')
+const inputPasswordElem = $.querySelectorAll('form .input__field .password__input')
 
 showBtn.forEach(btn => {
     btn.addEventListener('click' , () => {
@@ -54,8 +55,11 @@ signInsignUpLink.forEach(link => {
 })
 
 const clearInputs = () => {
-    inputElem.forEach(input => {
+    inputElems.forEach(input => {
         input.value = ''
+    })
+
+    inputPasswordElem.forEach(input => {
         input.type = 'password'
     })
 
